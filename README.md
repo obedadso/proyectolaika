@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### APP TIENDA DE MODA
 
 Este proyecto proporciona un sistema de gestion para una empresa de mascotas
@@ -36,3 +37,6 @@ implementado con Python Flask y MySQL.
 
 
 	
+=======
+# App-laika-final
+>>>>>>> d5c57d64549c6a1c46ea928ff61b248c9e7ebdeb
