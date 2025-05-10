@@ -1,0 +1,84 @@
+{% extends "base.html" %} 
+
+{% block title %} Log In {% endblock title %}
+
+{% block css %} 
+
+<style>
+    .divider::after,
+    .divider::before {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #eee;
+    }
+
+    .h-custom {
+      height: calc(100% - 73px);
+    }
+
+    .logo-img {
+      width: 150px; /* Ajusta el tamaño del logo */
+      height: auto;
+    }
+
+    @media (max-width: 450px) {
+      .h-custom {
+        height: 100%;
+      }
+    }
+</style>
+{% endblock css %}
+
+{% block body %}
+<div class="container">
+    <section class="vh-100">
+        <div class="container-fluid h-custom">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-8 col-lg-6 col-xl-4 text-center">
+                    <img src="static/img/logo.png" class="img-fluid mb-4 logo-img" alt="image">
+                    <form action="login" method="post">
+                        <div class="divider d-flex align-items-center my-4">
+                            <p class="text-center mx-3 mb-0 display-5">Iniciar Sesión</p>
+                        </div>
+
+                        <!-- ID input -->
+                        <div class="form-floating mb-3">
+                            <input type="text" id="email" class="form-control form-control-lg" placeholder=" " name="email" required>
+                            <label for="email">Usuario</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-floating mb-3">
+                            <input type="password" id="passw" class="form-control form-control-lg" placeholder="Contraseña" name="password" required />
+                            <label for="passw">Contraseña</label>
+                        </div>
+                        
+                        <!-- Radio buttons for clientes/admin selection -->
+                        <div class="mb-4">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rol" id="ClientesRadio" value="clientes" required>
+                                <label class="form-check-label" for="ClientesRadio">Cliente</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rol" id="adminRadio" value="admin" required>
+                                <label class="form-check-label" for="adminRadio">Administrador</label>
+                            </div>
+                        </div>
+
+                        <div class="text-center text-lg-start mt-4 pt-2">
+                            <button type="submit" class="btn btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem; background-color: #6A1B9A; border-color: #6A1B9A; color: white;">Iniciar</button>
+                        </div>
+
+                        <!-- Enlaces a Registro y Recuperación de Contraseña -->
+                        <div class="mt-3 text-center">
+                            <p>¿No tienes cuenta? <a href="{{ url_for('registrar_usuario') }}">Regístrate aquí</a></p>
+                            <p><a href="{{ url_for('recuperacion') }}">¿Olvidaste tu contraseña?</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock body %}

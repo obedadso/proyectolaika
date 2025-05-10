@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{%block title%}
+Categorias
+{%endblock title%}
+
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Store</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Carrusel -->
+    <div id="carouselExampleControls" class="carousel slide mt-4" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/carruselperrogato.jpg') }}" class="d-block w-100" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/carruselgato2.jpg') }}" class="d-block w-100" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/carruselperro1.jpg') }}" class="d-block w-100" alt="Imagen 3">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/carruselgato.jpg') }}" class="d-block w-100" alt="Imagen 4">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/carruselperro2.jpg') }}" class="d-block w-100" alt="Imagen 5">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Tarjetas -->
+    <div class="container mt-5">
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ url_for('static', filename='images/perroimg3.jpg') }}" class="card-img-top" alt="Perros">
+                    <div class="card-body">
+                        <h5 class="card-title">Perros</h5>
+                        <p class="card-text">Explora nuestra colección de productos para perros.</p>
+                        <a href="/perros" class="btn" style="background-color: #6A1B9A; border-color: #6A1B9A; color: white;">
+                            <i class="fa-solid fa-arrow-right fa-lg"></i> Gestionar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ url_for('static', filename='images/gatoimg1.png') }}" class="card-img-top" alt="Gatos">
+                    <div class="card-body">
+                        <h5 class="card-title">Gatos</h5>
+                        <p class="card-text">Encuentra los mejores productos para tu gato.</p>
+                        <a href="/gatos" class="btn" style="background-color: #6A1B9A; border-color: #6A1B9A; color: white;">
+                            <i class="fa-solid fa-arrow-right fa-lg"></i> Gestionar
+                        </a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ url_for('static', filename='images/juguetes.png') }}" class="card-img-top" alt="Juguetes">
+                    <div class="card-body">
+                        <h5 class="card-title">Juguetes</h5>
+                        <p class="card-text">Descubre juguetes divertidos para tus mascotas.</p>
+                        <a href="/juguetes" class="btn" style="background-color: #6A1B9A; border-color: #6A1B9A; color: white;">
+                            <i class="fa-solid fa-arrow-right fa-lg"></i> Gestionar
+                        </a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ url_for('static', filename='images/accesorios.png') }}" class="card-img-top" alt="Accesorios">
+                    <div class="card-body">
+                        <h5 class="card-title">Accesorios</h5>
+                        <p class="card-text">Accesorios de calidad para tu mascota.</p>
+                        <a href="/accesorios" class="btn" style="background-color: #6A1B9A; border-color: #6A1B9A; color: white;">
+                            <i class="fa-solid fa-arrow-right fa-lg"></i> Gestionar
+                        </a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ url_for('static', filename='images/snacks.png') }}" class="card-img-top" alt="Snacks">
+                    <div class="card-body">
+                        <h5 class="card-title">Snacks</h5>
+                        <p class="card-text">Deliciosos snacks para premiar a tu mascota.</p>
+                        <a href="/snacks" class="btn" style="background-color: #6A1B9A; border-color: #6A1B9A; color: white;">
+                            <i class="fa-solid fa-arrow-right fa-lg"></i> Gestionar
+                        </a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+{%endblock body%}

@@ -1,0 +1,182 @@
+{% extends "base.html" %} {%block title%} Inicio {%endblock title%} {% block body
+%}
+  <!-- Carrusel de imágenes de Bootstrap -->
+<div id="carouselExampleControls" class="carousel slide mt-4" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ url_for('static', filename='images/carruselperrogato.jpg') }}" class="d-block w-100" alt="Imagen 1">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='images/carruselgato2.jpg') }}" class="d-block w-100" alt="Imagen 2">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='images/carruselperro1.jpg') }}" class="d-block w-100" alt="Imagen 3">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='images/carruselgato.jpg') }}" class="d-block w-100" alt="Imagen 4">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='images/carruselperro2.jpg') }}" class="d-block w-100" alt="Imagen 5">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container mt-5" style="margin-bottom: 30px;">
+  <h2 class="text-center" style="color: #6A1B9A;">Laika Universo Peludo</h2>
+  <p class="text-center lead" style=" color: #6A1B9A; font-size: 1.2rem;">
+    Laika es la tienda online más completa para mascotas creada por pet lovers para pet lovers! Somos la tienda en línea de mascotas con mayor variedad de productos y servicios a domicilio en Colombia.
+    Para Laika, la salud y bienestar de tu mascota es lo más importante. Nos esforzamos día a día por dar la mejor experiencia y servicio a los pet lovers y para que a tus peluditos no les falte nada para su cuidado y salud.
+  </p>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img src="{{ url_for('static', filename='img/gato1.jpg') }}" class="card-img-top img-fluid rounded" alt="Mascota 1">
+        <div class="card-body text-center">
+          <h5 class="card-title">Gato Juguetón</h5>
+          <p class="text-muted"><del>$25,000</del></p>
+          <p class="fw-bold" style="color: #6A1B9A;">$20,000</p> <!-- Cambiado a morado -->
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img src="{{ url_for('static', filename='img/perro5.jpg') }}" class="card-img-top img-fluid rounded" alt="Mascota 2">
+        <div class="card-body text-center">
+          <h5 class="card-title">Perro Feliz</h5>
+          <p class="text-muted"><del>$30,000</del></p>
+          <p class="fw-bold" style="color: #6A1B9A;">$25,000</p> <!-- Cambiado a morado -->
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img src="{{ url_for('static', filename='img/gato6.jpg') }}" class="card-img-top img-fluid rounded" alt="Mascota 3">
+        <div class="card-body text-center">
+          <h5 class="card-title">Gato Elegante</h5>
+          <p class="text-muted"><del>$35,000</del></p>
+          <p class="fw-bold" style="color: #6A1B9A;">$28,000</p> <!-- Cambiado a morado -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img src="{{ url_for('static', filename='img/snack4.jpg') }}" class="card-img-top img-fluid rounded" alt="Snack 1">
+        <div class="card-body text-center">
+          <h5 class="card-title">Snack Saludable</h5>
+          <p class="text-muted"><del>$12,000</del></p>
+          <p class="fw-bold" style="color: #6A1B9A;">$9,500</p> <!-- Cambiado a morado -->
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img src="{{ url_for('static', filename='img/juguete15.jpg') }}" class="card-img-top img-fluid rounded" alt="Juguete 1">
+        <div class="card-body text-center">
+          <h5 class="card-title">Juguete Divertido</h5>
+          <p class="text-muted"><del>$18,000</del></p>
+          <p class="fw-bold" style="color: #6A1B9A;">$15,000</p> <!-- Cambiado a morado -->
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img src="{{ url_for('static', filename='img/accesorio5.jpg') }}" class="card-img-top img-fluid rounded" alt="Accesorio 1">
+        <div class="card-body text-center">
+          <h5 class="card-title">Plato Elegante</h5>
+          <p class="text-muted"><del>$22,000</del></p>
+          <p class="fw-bold" style="color: #6A1B9A;">$18,000</p> <!-- Cambiado a morado -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- ***** Main Banner Area End ***** -->
+
+
+<!-- ***** About Area Ends ***** -->
+
+<!-- ***** Main Banner Area Start ***** -->
+<div class="page-heading about-page-heading" id="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="inner-content">
+          <h2 style="color: #6A1B9A;"></h2>
+          <span style="color: #6A1B9A;"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ***** Main Banner Area End ***** -->
+<!-- ***** Contact Area Starts ***** -->
+<div class="contact-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div id="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15749.331192694783!2d-75.39992545183169!3d9.303750902301832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d9.3054974!2d-75.3970278!4m5!1s0x8e591591a4e46469%3A0xf225c84ccb61114c!2sparque%20comercial%20guacar%C3%AD%20google%20map!3m2!1d9.3018783!2d-75.3826243!5e0!3m2!1ses-419!2sco!4v1739492372989!5m2!1ses-419!2sco"
+            width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+          
+          <!-- You can simply copy and paste "Embed a map" code from Google Maps for any location. -->
+
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="section-heading">
+          <h2 style="color: #6A1B9A" >Di hola. ¡Escribenos..!</h2>
+          <span>Detalles a detalles es lo que diferencia a Laika de los otros.</span>
+        </div>
+        <form id="contact" action="" method="post">
+          <div class="row">
+            <div class="col-lg-6">
+              <fieldset>
+                <input name="name" type="text" id="name" placeholder="Tú nombre" required="">
+              </fieldset>
+            </div>
+            <div class="col-lg-6">
+              <fieldset>
+                <input name="email" type="text" id="email" placeholder="Tú Correo" required="">
+              </fieldset>
+            </div>
+            <div class="col-lg-12">
+              <fieldset>
+                <textarea name="message" rows="6" id="message" placeholder="Escribe un mensaje " required=""></textarea>
+              </fieldset>
+            </div>
+            <div class="col-lg-12">
+              <fieldset>
+                <button type="submit" id="form-submit" class="main-dark-button"><i
+                    class="fa fa-paper-plane"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ***** Contact Area Ends ***** -->
+
+
+
+
+{%endblock body%}
